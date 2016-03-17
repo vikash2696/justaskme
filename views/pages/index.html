@@ -1,0 +1,49 @@
+<html>
+<head>
+<% include ../partials/head.html %> 
+</head>
+<body>
+  <div class="container">
+    <% if(flag == 1) {%>
+    <h1>Welcome to <%= title %>!</h1>
+    <% } else { %>
+    <div id="user_head">
+      <div class="justaskme_name"><h4>Welcome</h4></div>
+      <div class="justaskme_question">
+        <form id="addQuestion" method="post" name="addQuestion">
+          <input type="text" name="question" class="question_area" placeholder="Ask any Question"></input>
+          <input type="button" id="addBtn" class="btn_class" value="Ask Question"></input>
+        </form>
+      </div>
+    </div>
+      <% } %>%>
+         <% if(flag == 1) {%>
+      <div style="margin:100px;" id="logindiv">
+        <h1 class="login-page-header">Hello, world!</h1>
+        <div class="jumbotron login_div"  style="padding:40px;">
+          
+          <div class="container">
+          <div class="signup">
+          <a href="/user" class="btn btn-danger"><span class="fa fa-google-plus"></span> Google</a>
+
+          </div>
+          <div class="signin">
+              
+          </div>
+
+          </div>
+        </div>
+      </div>
+      <% } else { %>
+        <div class="container">
+
+
+
+        </div>
+      <% } %>
+    </div>
+</body>
+<footer>
+  <% include ../partials/footer.html %>
+</footer>
+</html>

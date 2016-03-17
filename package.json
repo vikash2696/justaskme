@@ -1,0 +1,30 @@
+{
+  "name": "justaskme",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "ejs": "^2.4.1",
+    "express": "~4.13.1",
+    "forever": "^0.15.1",
+    "google-auth-library": "^0.9.7",
+    "googleapis": "^2.1.7",
+    "html": "0.0.10",
+    "jade": "~1.11.0",
+    "morgan": "~1.6.1",
+    "passport": "^0.3.2",
+    "serve-favicon": "~2.3.0",
+    "socket.io": "^1.4.5",
+    "supervisor": "^0.9.1"
+  },
+  "main": "app.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

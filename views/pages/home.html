@@ -1,0 +1,50 @@
+<html>
+<head>
+<% include ../partials/head.html %> 
+<script src="/javascripts/ckeditor/ckeditor.js"></script>
+</head>
+<body>
+<div class="container">
+	<div id="user_head">
+		  <div class="justaskme_name"><h4>Welcome</h4></div>
+			  <div class="justaskme_question">
+			    <form id="addQuestion" method="post" name="addQuestion">
+			      <input type="text" name="question" class="question_area" placeholder="Ask any Question"></input>
+			      <input type="button" id="addBtn" class="btn_class" value="Ask Question"></input>
+			    </form>
+			    <!-- <input type="button" class="btn_class" class="ansbtn"value="Answer"></input> -->
+		  	  </div>
+	</div>
+
+	<div id="pop-up">
+	</div>
+	<div class="col-xs-2" id="left_panel">ksjdhkshdhksd</div>
+	<div class="col-xs-8" id="center_panel">
+		<hr>
+			<% for(var i=0; i < question.length; i++) { %>
+			   <div>
+			     <h4><%= question[i].question %></h4>
+			     <form method="post" name="ansQuesForm" class="ansQuesForm" id="ansQuesForm<%= question[i].id %>">
+				     <input type="button" value="Answer" class="ansBtn" id="<%= question[i].id %>">
+				     <textarea name="editor-<%= question[i].id %>" class="editor" id="ansEditor-<%= question[i].id %>" rows="10" cols="80" style="display:none;">
+	              	  This is my textarea to be replaced with CKEditor.
+	         	  	 </textarea><input type="button" value="submit" class="saveBtn" id="<%= question[i].id %>"/><hr>
+	         	  	 <script>
+	         	  	 
+	               	 CKEDITOR.replace('editor-<%= question[i].id %>');
+	               	 CKEDITOR.add
+	          		  </script>
+
+   				</form>
+			   </div>
+			<% } %>
+
+	</div>
+	
+	<div class="col-xs-2" id="right_panel">sdsdsds</div>
+</div>
+</body>
+<footer>
+  <% include ../partials/footer.html %>
+</footer>
+</html>
